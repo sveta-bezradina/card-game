@@ -19,10 +19,7 @@ const arrayImg = ["images/6D.png","images/6H.png",
 
 const arrayNominal = [6,6,7,7,8,8,9,9,10,10,11,11,2,2,4,4,3,3];
 
-let img1 = document.createElement("img");
-let img2 = document.createElement("img");
-card1.appendChild(img1);
-card2.appendChild(img2);
+
 nameUser.innerHTML = user;
 
 let count1=0;
@@ -36,8 +33,11 @@ btn.onclick = function(){
         const n1 = Math.floor(Math.random()*arrayImg.length);
         const n2 = Math.floor(Math.random()*arrayImg.length);
     
-        img1.src = arrayImg[n1];
-        img2.src = arrayImg[n2];
+        card1.style.backgroundImage = `url(${arrayImg[n1]})`;
+        card1.style.backgroundSize="100%";
+
+        card2.style.backgroundImage = `url(${arrayImg[n2]})`;
+        card2.style.backgroundSize="100%";
 
         count1+=arrayNominal[n1];
         count2+=arrayNominal[n2];
@@ -69,4 +69,6 @@ function Reset(){
     count1=null;        
     count2=null;
     i=-1;
+    card2.style.backgroundImage = `url(images/red_back.png)`;
+    card1.style.backgroundImage = `url(images/red_back.png)`;
 }

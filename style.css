@@ -50,18 +50,14 @@ button{
     box-shadow:  2px 2px 7px rgb(56, 56, 56);
 }
 .card{
-    width:80%;
-    height:50%;
+    width:250px;
+    height:380px;
     display: flex;
     justify-content: space-around;
 	align-items:center;
 	flex-direction:column;
     margin-top: 15px;
     border-radius: 10px;
-    background-color: rgb(15, 138, 182);
-}
-img{
-    width:100%;
-    height:100%;
-    object-fit: cover;
+    background-image: url(images/red_back.png);
+    background-size: 100%;
 }
